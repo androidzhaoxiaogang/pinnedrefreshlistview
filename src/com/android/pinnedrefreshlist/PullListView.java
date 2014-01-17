@@ -576,6 +576,8 @@ public class PullListView extends ListView implements OnScrollListener {
 				heightSpec = MeasureSpec.makeMeasureSpec(0,
 						MeasureSpec.UNSPECIFIED);
 			}
+			header.setLayoutParams(new LayoutParams(
+				    LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
 			header.measure(widthSpec, heightSpec);
 			int height = header.getMeasuredHeight();
 			header.layout(0, 0, getWidth(), height);
